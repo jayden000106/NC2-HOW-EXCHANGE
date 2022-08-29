@@ -1,24 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="바꾸고 싶은 화폐 단위를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJE-Cz-daL">
+                                <rect key="frame" x="20" y="144" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-MS-5Cj">
+                                <rect key="frame" x="20" y="782" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2Gu-sm-2ir"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="메뉴판 촬영하기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                </buttonConfiguration>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRw-d7-y0F">
+                                <rect key="frame" x="20" y="213" width="374" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWG-bu-R0X">
+                                        <rect key="frame" x="20" y="20" width="334" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="wJL-r5-eDd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VND(베트남 동)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phB-TL-Oqk">
+                                        <rect key="frame" x="20" y="52" width="334" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="ybs-32-We5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8d-np-2aN">
+                                        <rect key="frame" x="20" y="98" width="334" height="2"/>
+                                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="r82-nh-kkJ"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSd-zk-WPV">
+                                        <rect key="frame" x="20" y="120" width="334" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="Pj5-9o-BfN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KRW(대한민국 원)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHv-A1-1va">
+                                        <rect key="frame" x="20" y="152" width="334" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="Atn-9U-TqH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="d8d-np-2aN" firstAttribute="top" secondItem="phB-TL-Oqk" secondAttribute="bottom" constant="20" id="01d-LT-3vj"/>
+                                    <constraint firstItem="phB-TL-Oqk" firstAttribute="top" secondItem="AWG-bu-R0X" secondAttribute="bottom" constant="10" id="1HY-Ef-DHP"/>
+                                    <constraint firstItem="yHv-A1-1va" firstAttribute="top" secondItem="jSd-zk-WPV" secondAttribute="bottom" constant="10" id="1qY-N3-Q5D"/>
+                                    <constraint firstAttribute="trailing" secondItem="jSd-zk-WPV" secondAttribute="trailing" constant="20" id="6c8-rR-lBb"/>
+                                    <constraint firstItem="jSd-zk-WPV" firstAttribute="top" secondItem="d8d-np-2aN" secondAttribute="bottom" constant="20" id="7kE-Dr-x7w"/>
+                                    <constraint firstItem="yHv-A1-1va" firstAttribute="leading" secondItem="NRw-d7-y0F" secondAttribute="leading" constant="20" id="8EN-zr-AbK"/>
+                                    <constraint firstItem="jSd-zk-WPV" firstAttribute="leading" secondItem="NRw-d7-y0F" secondAttribute="leading" constant="20" id="8GJ-qk-trK"/>
+                                    <constraint firstAttribute="trailing" secondItem="AWG-bu-R0X" secondAttribute="trailing" constant="20" id="AKv-lT-R1X"/>
+                                    <constraint firstAttribute="trailing" secondItem="d8d-np-2aN" secondAttribute="trailing" constant="20" id="G0K-Ah-F4n"/>
+                                    <constraint firstItem="AWG-bu-R0X" firstAttribute="top" secondItem="NRw-d7-y0F" secondAttribute="top" constant="20" id="Hj8-Tm-6pB"/>
+                                    <constraint firstAttribute="height" constant="198" id="Ly5-To-SEf"/>
+                                    <constraint firstAttribute="trailing" secondItem="phB-TL-Oqk" secondAttribute="trailing" constant="20" id="Xkd-2x-zp5"/>
+                                    <constraint firstItem="phB-TL-Oqk" firstAttribute="leading" secondItem="NRw-d7-y0F" secondAttribute="leading" constant="20" id="Yry-x8-xGP"/>
+                                    <constraint firstItem="AWG-bu-R0X" firstAttribute="leading" secondItem="NRw-d7-y0F" secondAttribute="leading" constant="20" id="bjk-6a-VUC"/>
+                                    <constraint firstAttribute="trailing" secondItem="yHv-A1-1va" secondAttribute="trailing" constant="20" id="pFl-R8-HFw"/>
+                                    <constraint firstItem="d8d-np-2aN" firstAttribute="leading" secondItem="NRw-d7-y0F" secondAttribute="leading" constant="20" id="pzh-Te-dmc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NRw-d7-y0F" secondAttribute="trailing" constant="20" id="2yc-Dr-sAX"/>
+                            <constraint firstAttribute="trailing" secondItem="UJE-Cz-daL" secondAttribute="trailing" constant="20" id="CWi-gR-8UG"/>
+                            <constraint firstItem="NRw-d7-y0F" firstAttribute="top" secondItem="UJE-Cz-daL" secondAttribute="bottom" constant="40" id="KbZ-Nj-czW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8vP-MS-5Cj" secondAttribute="trailing" constant="20" id="N1i-Hd-ayp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8vP-MS-5Cj" secondAttribute="bottom" constant="20" id="TgF-5o-mWq"/>
+                            <constraint firstItem="8vP-MS-5Cj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f24-6C-crR"/>
+                            <constraint firstItem="NRw-d7-y0F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gEW-yg-Lac"/>
+                            <constraint firstItem="UJE-Cz-daL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gPn-Mh-8KM"/>
+                            <constraint firstItem="UJE-Cz-daL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="v8d-8z-3II"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-13" y="116"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

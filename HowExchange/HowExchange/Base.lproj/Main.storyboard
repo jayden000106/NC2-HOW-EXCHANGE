@@ -22,17 +22,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-MS-5Cj">
-                                <rect key="frame" x="20" y="782" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="2Gu-sm-2ir"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="메뉴판 촬영하기">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                </buttonConfiguration>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRw-d7-y0F">
                                 <rect key="frame" x="20" y="213" width="374" height="198"/>
                                 <subviews>
@@ -100,6 +89,27 @@
                                     <constraint firstItem="d8d-np-2aN" firstAttribute="leading" secondItem="NRw-d7-y0F" secondAttribute="leading" constant="20" id="pzh-Te-dmc"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bS-Rv-bUp">
+                                <rect key="frame" x="20" y="782" width="374" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-MS-5Cj">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="메뉴판 촬영하기">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8vP-MS-5Cj" secondAttribute="bottom" id="3h0-Wn-csm"/>
+                                    <constraint firstItem="8vP-MS-5Cj" firstAttribute="leading" secondItem="4bS-Rv-bUp" secondAttribute="leading" id="5m9-90-EpY"/>
+                                    <constraint firstAttribute="height" constant="60" id="NOp-Pb-LyK"/>
+                                    <constraint firstAttribute="trailing" secondItem="8vP-MS-5Cj" secondAttribute="trailing" id="aL1-aI-6xZ"/>
+                                    <constraint firstItem="8vP-MS-5Cj" firstAttribute="top" secondItem="4bS-Rv-bUp" secondAttribute="top" id="ewj-kD-79r"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -107,14 +117,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NRw-d7-y0F" secondAttribute="trailing" constant="20" id="2yc-Dr-sAX"/>
                             <constraint firstAttribute="trailing" secondItem="UJE-Cz-daL" secondAttribute="trailing" constant="20" id="CWi-gR-8UG"/>
                             <constraint firstItem="NRw-d7-y0F" firstAttribute="top" secondItem="UJE-Cz-daL" secondAttribute="bottom" constant="40" id="KbZ-Nj-czW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8vP-MS-5Cj" secondAttribute="trailing" constant="20" id="N1i-Hd-ayp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8vP-MS-5Cj" secondAttribute="bottom" constant="20" id="TgF-5o-mWq"/>
-                            <constraint firstItem="8vP-MS-5Cj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f24-6C-crR"/>
+                            <constraint firstItem="4bS-Rv-bUp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NrR-6w-hI7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4bS-Rv-bUp" secondAttribute="bottom" constant="20" id="Wu8-HG-mqA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4bS-Rv-bUp" secondAttribute="trailing" constant="20" id="avN-67-yh3"/>
                             <constraint firstItem="NRw-d7-y0F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gEW-yg-Lac"/>
                             <constraint firstItem="UJE-Cz-daL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gPn-Mh-8KM"/>
                             <constraint firstItem="UJE-Cz-daL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="v8d-8z-3II"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="exchangeView" destination="NRw-d7-y0F" id="xmz-4m-dPe"/>
+                        <outlet property="takeButtonView" destination="4bS-Rv-bUp" id="HeZ-X7-cNb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

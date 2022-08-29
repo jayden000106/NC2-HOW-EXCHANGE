@@ -8,12 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var exchangeView: UIView!
+    @IBOutlet weak var takeButtonView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        exchangeView.layer.cornerRadius = 20
+        exchangeView.layer.applyFigmaShadow()
+        
+        takeButtonView.layer.cornerRadius = 20
+        takeButtonView.layer.applyFigmaShadow()
     }
-
-
 }
-

@@ -16,6 +16,7 @@
 		B911BB4428BC8811000EECD8 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4328BC8811000EECD8 /* Storage.swift */; };
 		B911BB4728BCAA10000EECD8 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4628BCAA10000EECD8 /* CALayer+.swift */; };
 		B911BB4A28BDDE1D000EECD8 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4928BDDE1D000EECD8 /* Unit.swift */; };
+		B911BB4E28BDF819000EECD8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4D28BDF819000EECD8 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B911BB4328BC8811000EECD8 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		B911BB4628BCAA10000EECD8 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		B911BB4928BDDE1D000EECD8 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		B911BB4D28BDF819000EECD8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		B911BB2D28BC84BE000EECD8 /* HowExchange */ = {
 			isa = PBXGroup;
 			children = (
+				B911BB4C28BDF7C0000EECD8 /* Contoller */,
 				B911BB4828BDDE08000EECD8 /* Model */,
 				B911BB4528BCA9DA000EECD8 /* Extension */,
 				B911BB4228BC87CC000EECD8 /* Service */,
@@ -98,6 +101,14 @@
 				B911BB4928BDDE1D000EECD8 /* Unit.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B911BB4C28BDF7C0000EECD8 /* Contoller */ = {
+			isa = PBXGroup;
+			children = (
+				B911BB4D28BDF819000EECD8 /* CameraViewController.swift */,
+			);
+			path = Contoller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				B911BB4428BC8811000EECD8 /* Storage.swift in Sources */,
 				B911BB2F28BC84BE000EECD8 /* AppDelegate.swift in Sources */,
 				B911BB4A28BDDE1D000EECD8 /* Unit.swift in Sources */,
+				B911BB4E28BDF819000EECD8 /* CameraViewController.swift in Sources */,
 				B911BB3128BC84BE000EECD8 /* SceneDelegate.swift in Sources */,
 				B911BB4728BCAA10000EECD8 /* CALayer+.swift in Sources */,
 			);

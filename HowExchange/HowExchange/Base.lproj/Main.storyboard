@@ -128,6 +128,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="메뉴판 사진 선택하기">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="O81-Q0-L6b" kind="show" id="DxV-4O-i0K"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -208,6 +211,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1JT-Ef-Kuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1567" y="116"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5Tf-AR-IgX">
+            <objects>
+                <viewController id="O81-Q0-L6b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="niu-eL-7Au">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="J66-y1-c3L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Tg-qo-CkH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gT2-CY-fAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1567" y="845"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aQN-6C-zRS">

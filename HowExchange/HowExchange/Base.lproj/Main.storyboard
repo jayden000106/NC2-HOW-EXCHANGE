@@ -234,7 +234,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Tg-qo-CkH">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="gJw-Sg-VsL"/>
+                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="k3g-SH-Ndz">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="O81-Q0-L6b" id="8IH-xV-RVl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="완료" id="gJw-Sg-VsL">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="18v-hT-4aV" id="NbT-v5-uhN"/>
@@ -264,6 +272,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -22,6 +22,10 @@ class SelectViewController: UIViewController {
         picker.delegate = self
         self.present(picker, animated: true, completion: nil)
     }
+    
+    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 extension SelectViewController: PHPickerViewControllerDelegate {

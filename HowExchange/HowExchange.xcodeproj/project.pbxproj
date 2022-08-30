@@ -18,6 +18,7 @@
 		B911BB4A28BDDE1D000EECD8 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4928BDDE1D000EECD8 /* Unit.swift */; };
 		B911BB4E28BDF819000EECD8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4D28BDF819000EECD8 /* CameraViewController.swift */; };
 		B911BB5028BE00C3000EECD8 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */; };
+		B911BB5228BE6C7A000EECD8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB5128BE6C7A000EECD8 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B911BB4928BDDE1D000EECD8 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		B911BB4D28BDF819000EECD8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		B911BB5128BE6C7A000EECD8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				B911BB4D28BDF819000EECD8 /* CameraViewController.swift */,
 				B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */,
+				B911BB5128BE6C7A000EECD8 /* ResultViewController.swift */,
 			);
 			path = Contoller;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				B911BB4E28BDF819000EECD8 /* CameraViewController.swift in Sources */,
 				B911BB3128BC84BE000EECD8 /* SceneDelegate.swift in Sources */,
 				B911BB4728BCAA10000EECD8 /* CALayer+.swift in Sources */,
+				B911BB5228BE6C7A000EECD8 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

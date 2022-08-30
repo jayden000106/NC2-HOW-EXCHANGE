@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var exchangeView: UIView!
     @IBOutlet weak var takeButtonView: UIView!
+    @IBOutlet weak var selectButtonView: UIView!
     
     @IBOutlet weak var fromTextField: UITextField!
     @IBOutlet weak var toTextField: UITextField!
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
         
         takeButtonView.layer.cornerRadius = 20
         takeButtonView.layer.applyFigmaShadow()
+        selectButtonView.layer.cornerRadius = 20
+        selectButtonView.layer.applyFigmaShadow()
         
         let fromPickerView = UIPickerView()
         fromPickerView.tag = 1

@@ -115,30 +115,56 @@
                                     <constraint firstItem="d8d-np-2aN" firstAttribute="leading" secondItem="NRw-d7-y0F" secondAttribute="leading" constant="20" id="pzh-Te-dmc"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bS-Rv-bUp">
-                                <rect key="frame" x="20" y="782" width="374" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kzW-jH-b8y">
+                                <rect key="frame" x="20" y="712" width="374" height="130"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-MS-5Cj">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V14-H7-asH">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="메뉴판 촬영하기">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="nLX-oq-kgV" kind="show" id="S7b-CA-Yrw"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHX-zI-MuP">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="메뉴판 사진 선택하기">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="pHX-zI-MuP" secondAttribute="trailing" id="3my-NM-Drr"/>
+                                            <constraint firstItem="pHX-zI-MuP" firstAttribute="leading" secondItem="V14-H7-asH" secondAttribute="leading" id="Ae1-cg-eaL"/>
+                                            <constraint firstAttribute="bottom" secondItem="pHX-zI-MuP" secondAttribute="bottom" id="q9x-sG-qb1"/>
+                                            <constraint firstAttribute="height" constant="60" id="uUX-U9-LAq"/>
+                                            <constraint firstItem="pHX-zI-MuP" firstAttribute="top" secondItem="V14-H7-asH" secondAttribute="top" id="xwP-e3-jny"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYb-dr-Cak">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-MS-5Cj">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="메뉴판 촬영하기">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="nLX-oq-kgV" kind="show" id="S7b-CA-Yrw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="8vP-MS-5Cj" firstAttribute="leading" secondItem="EYb-dr-Cak" secondAttribute="leading" id="9Kk-6P-njO"/>
+                                            <constraint firstAttribute="trailing" secondItem="8vP-MS-5Cj" secondAttribute="trailing" id="Mdr-XB-vby"/>
+                                            <constraint firstAttribute="bottom" secondItem="8vP-MS-5Cj" secondAttribute="bottom" id="QbA-1I-oOz"/>
+                                            <constraint firstItem="8vP-MS-5Cj" firstAttribute="top" secondItem="EYb-dr-Cak" secondAttribute="top" id="ny8-pj-Zs7"/>
+                                            <constraint firstAttribute="height" constant="60" id="r1l-JL-QjB"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="8vP-MS-5Cj" secondAttribute="bottom" id="3h0-Wn-csm"/>
-                                    <constraint firstItem="8vP-MS-5Cj" firstAttribute="leading" secondItem="4bS-Rv-bUp" secondAttribute="leading" id="5m9-90-EpY"/>
-                                    <constraint firstAttribute="height" constant="60" id="NOp-Pb-LyK"/>
-                                    <constraint firstAttribute="trailing" secondItem="8vP-MS-5Cj" secondAttribute="trailing" id="aL1-aI-6xZ"/>
-                                    <constraint firstItem="8vP-MS-5Cj" firstAttribute="top" secondItem="4bS-Rv-bUp" secondAttribute="top" id="ewj-kD-79r"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -146,9 +172,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NRw-d7-y0F" secondAttribute="trailing" constant="20" id="2yc-Dr-sAX"/>
                             <constraint firstAttribute="trailing" secondItem="UJE-Cz-daL" secondAttribute="trailing" constant="20" id="CWi-gR-8UG"/>
                             <constraint firstItem="NRw-d7-y0F" firstAttribute="top" secondItem="UJE-Cz-daL" secondAttribute="bottom" constant="40" id="KbZ-Nj-czW"/>
-                            <constraint firstItem="4bS-Rv-bUp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NrR-6w-hI7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4bS-Rv-bUp" secondAttribute="bottom" constant="20" id="Wu8-HG-mqA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4bS-Rv-bUp" secondAttribute="trailing" constant="20" id="avN-67-yh3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kzW-jH-b8y" secondAttribute="trailing" constant="20" id="U4e-DO-38d"/>
+                            <constraint firstItem="kzW-jH-b8y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="daz-j1-CAI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kzW-jH-b8y" secondAttribute="bottom" constant="20" id="dwL-PT-6b8"/>
                             <constraint firstItem="NRw-d7-y0F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gEW-yg-Lac"/>
                             <constraint firstItem="UJE-Cz-daL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gPn-Mh-8KM"/>
                             <constraint firstItem="UJE-Cz-daL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="v8d-8z-3II"/>
@@ -158,7 +184,8 @@
                     <connections>
                         <outlet property="exchangeView" destination="NRw-d7-y0F" id="xmz-4m-dPe"/>
                         <outlet property="fromTextField" destination="npy-hF-P7G" id="MDT-wm-2eb"/>
-                        <outlet property="takeButtonView" destination="4bS-Rv-bUp" id="HeZ-X7-cNb"/>
+                        <outlet property="selectButtonView" destination="V14-H7-asH" id="UOR-4u-mYj"/>
+                        <outlet property="takeButtonView" destination="EYb-dr-Cak" id="M4h-v7-6db"/>
                         <outlet property="toTextField" destination="LPU-4T-idV" id="d8Z-d5-oiZ"/>
                     </connections>
                 </viewController>

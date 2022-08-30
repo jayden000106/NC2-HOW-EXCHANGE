@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="897.10144927536237" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="zg4-us-CLa">
             <objects>
-                <viewController id="nLX-oq-kgV" sceneMemberID="viewController">
+                <viewController id="nLX-oq-kgV" customClass="CameraViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8rI-cJ-dmF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

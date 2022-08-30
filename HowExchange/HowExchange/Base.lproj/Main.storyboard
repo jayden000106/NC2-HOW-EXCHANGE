@@ -212,6 +212,22 @@
             </objects>
             <point key="canvasLocation" x="1567" y="116"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XNm-Wn-iYA">
+            <objects>
+                <viewController id="Xiw-dc-hsO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fnc-AT-Bsv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="83E-rn-Pkj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9A2-U3-Cqp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhs-Zj-fj6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2242" y="844"/>
+        </scene>
         <!--Select View Controller-->
         <scene sceneID="5Tf-AR-IgX">
             <objects>
@@ -242,6 +258,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="완료" id="gJw-Sg-VsL">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="Xiw-dc-hsO" kind="show" id="dXX-yn-pDp"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

@@ -206,7 +206,14 @@
                         <viewLayoutGuide key="safeArea" id="yIQ-hb-xig"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8XC-7p-7BZ"/>
+                    <navigationItem key="navigationItem" id="8XC-7p-7BZ">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="9Yl-vZ-ZjU">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="nLX-oq-kgV" id="Zlo-Kz-mAn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1JT-Ef-Kuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,4 +13,8 @@ class CameraViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="juk-lk-yW9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="바꾸고 싶은 화폐 단위를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJE-Cz-daL">
-                                <rect key="frame" x="20" y="144" width="374" height="29"/>
+                                <rect key="frame" x="20" y="146" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRw-d7-y0F">
-                                <rect key="frame" x="20" y="213" width="374" height="198"/>
+                                <rect key="frame" x="20" y="215" width="374" height="198"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWG-bu-R0X">
                                         <rect key="frame" x="20" y="20" width="334" height="22"/>
@@ -125,6 +125,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="메뉴판 촬영하기">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="nLX-oq-kgV" kind="show" id="S7b-CA-Yrw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -148,9 +151,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4bS-Rv-bUp" secondAttribute="trailing" constant="20" id="avN-67-yh3"/>
                             <constraint firstItem="NRw-d7-y0F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gEW-yg-Lac"/>
                             <constraint firstItem="UJE-Cz-daL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gPn-Mh-8KM"/>
-                            <constraint firstItem="UJE-Cz-daL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="v8d-8z-3II"/>
+                            <constraint firstItem="UJE-Cz-daL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="v8d-8z-3II"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="X0S-bk-qgp"/>
                     <connections>
                         <outlet property="exchangeView" destination="NRw-d7-y0F" id="xmz-4m-dPe"/>
                         <outlet property="fromTextField" destination="npy-hF-P7G" id="MDT-wm-2eb"/>
@@ -160,7 +164,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="116"/>
+            <point key="canvasLocation" x="897.10144927536237" y="115.84821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zg4-us-CLa">
+            <objects>
+                <viewController id="nLX-oq-kgV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8rI-cJ-dmF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yIQ-hb-xig"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8XC-7p-7BZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1JT-Ef-Kuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1567" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aQN-6C-zRS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="juk-lk-yW9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GEh-aY-dvS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ax7-9J-Uy9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctm-nn-N6Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>

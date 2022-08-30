@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum monetaryUnit: String {
-    case KRW = "KRW"
-    case USD = "USD"
-    case VND = "VND"
+enum MonetaryUnit: String, CaseIterable {
+    case KRW = "KRW(대한민국 원)"
+    case USD = "USD(미국 달러)"
+    case VND = "VND(베트남 동)"
 }

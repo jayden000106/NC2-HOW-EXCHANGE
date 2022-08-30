@@ -37,15 +37,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlx-bo-KI7">
                                         <rect key="frame" x="20" y="52" width="334" height="26"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VND(베트남 동)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phB-TL-Oqk">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="VND(베트남 동)" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="npy-hF-P7G">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="26"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="26" id="ybs-32-We5"/>
-                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aKl-fV-Sdy">
                                                 <rect key="frame" x="314" y="5" width="20" height="16.5"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
@@ -86,15 +83,12 @@
                                                     <constraint firstAttribute="width" constant="20" id="nhd-8m-wND"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KRW(대한민국 원)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHv-A1-1va">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="KRW(대한민국 원)" textAlignment="right" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="LPU-4T-idV">
                                                 <rect key="frame" x="20" y="0.0" width="314" height="26"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="26" id="Atn-9U-TqH"/>
-                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="QU9-rT-LYN"/>
@@ -159,7 +153,9 @@
                     </view>
                     <connections>
                         <outlet property="exchangeView" destination="NRw-d7-y0F" id="xmz-4m-dPe"/>
+                        <outlet property="fromTextField" destination="npy-hF-P7G" id="MDT-wm-2eb"/>
                         <outlet property="takeButtonView" destination="4bS-Rv-bUp" id="HeZ-X7-cNb"/>
+                        <outlet property="toTextField" destination="LPU-4T-idV" id="d8Z-d5-oiZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

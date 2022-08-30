@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="1567" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--Select View Controller-->
         <scene sceneID="5Tf-AR-IgX">
             <objects>
-                <viewController id="O81-Q0-L6b" sceneMemberID="viewController">
+                <viewController id="O81-Q0-L6b" customClass="SelectViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="niu-eL-7Au">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -11,9 +11,12 @@ import PhotosUI
 class SelectViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var confirmButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        confirmButton.isEnabled = false
         
         var configuration = PHPickerConfiguration()
         configuration.filter = .images
@@ -21,6 +24,13 @@ class SelectViewController: UIViewController {
         let picker = PHPickerViewController(configuration: configuration)
         picker.delegate = self
         self.present(picker, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let image = imageView.image else { return }
+        
+        let destination = segue.destination as! ResultViewController
+        destination.image = image
     }
     
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
@@ -37,6 +47,7 @@ extension SelectViewController: PHPickerViewControllerDelegate {
                 if let image = object as? UIImage {
                     DispatchQueue.main.async {
                         self.imageView.image = image
+                        self.confirmButton.isEnabled = true
                     }
                 }
             })

@@ -270,7 +270,7 @@
         <!--Result View Controller-->
         <scene sceneID="XNm-Wn-iYA">
             <objects>
-                <viewController id="Xiw-dc-hsO" customClass="ResultViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultView" id="Xiw-dc-hsO" customClass="ResultViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fnc-AT-Bsv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -469,11 +469,12 @@
                         <barButtonItem key="rightBarButtonItem" title="완료" id="gJw-Sg-VsL">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
-                                <segue destination="Xiw-dc-hsO" kind="show" id="dXX-yn-pDp"/>
+                                <segue destination="Xiw-dc-hsO" kind="show" id="3sK-y4-eCS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="confirmButton" destination="gJw-Sg-VsL" id="iky-4Z-WWh"/>
                         <outlet property="imageView" destination="18v-hT-4aV" id="NbT-v5-uhN"/>
                     </connections>
                 </viewController>

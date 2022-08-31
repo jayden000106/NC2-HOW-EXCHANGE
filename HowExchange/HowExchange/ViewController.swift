@@ -40,6 +40,29 @@ class ViewController: UIViewController {
         toPickerView.tag = 2
         toPickerView.delegate = self
         toTextField.inputView = toPickerView
+        
+//        fetchUnit()
+    }
+    
+    func fetchUnit() {
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        let url = "https://api.apilayer.com/exchangerates_data/latest?symbols=VND,USD,JPY,EUR&base=KRW"
+        var request = URLRequest(url: URL(string: url)!, timeoutInterval: Double.infinity)
+        request.httpMethod = "GET"
+        request.addValue(Storage().apiKey, forHTTPHeaderField: "apikey")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                print(String(describing: error))
+                return
+            }
+            print(String(data: data, encoding: .utf8)!)
+            semaphore.signal()
+        }
+        
+        task.resume()
+        semaphore.wait()
     }
 }
 

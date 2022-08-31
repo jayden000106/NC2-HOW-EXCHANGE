@@ -12,3 +12,18 @@ enum MonetaryUnit: String, CaseIterable {
     case USD = "USD(미국 달러)"
     case VND = "VND(베트남 동)"
 }
+
+struct ParseResult: Codable {
+    var success: Bool
+    var timestamp: Int
+    var base: String
+    var date: String
+    var rates: ResultUnit
+}
+
+struct ResultUnit: Codable {
+    var KRW: Double
+    var USD: Double
+    var JPY: Double
+    var EUR: Double
+}

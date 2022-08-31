@@ -14,18 +14,19 @@ class ResultViewController: UIViewController {
     var calculatedDoubles: [Double] = []
     var resultUnit = ResultUnit(KRW: 0.0573, USD: 0.0000426, JPY: 0.00591, EUR: 0.0000427)
     
-    @IBOutlet weak var resultView: UIView!
-    
     @IBOutlet weak var changeUnitButtonView: UIView!
     @IBOutlet weak var retakePhotoButtonView: UIView!
+    @IBOutlet weak var resultTableView: UITableView!
+    @IBOutlet weak var resultTableViewHeader: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
         
-        resultView.layer.cornerRadius = 20
-        resultView.layer.applyFigmaShadow()
+        resultTableView.layer.cornerRadius = 20
+        resultTableView.layer.applyFigmaShadow()
+        resultTableViewHeader.layer.cornerRadius = 20
         
         changeUnitButtonView.layer.cornerRadius = 20
         changeUnitButtonView.layer.applyFigmaShadow()

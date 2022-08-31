@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         toPickerView.delegate = self
         toTextField.inputView = toPickerView
         
-        fetchUnit()
+//        fetchUnit()
     }
     
     func fetchUnit() {

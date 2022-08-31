@@ -10,6 +10,8 @@ import Vision
 
 class ResultViewController: UIViewController {
     var image: UIImage!
+    var recognizedDoubles: [Double] = []
+    var calculatedDoubles: [Double] = []
     
     @IBOutlet weak var resultView: UIView!
     
@@ -42,6 +44,24 @@ class ResultViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     print(recognizedStrings)
+                    
+                    for string in recognizedStrings {
+                        if let double = Double(string) {
+                            self.recognizedDoubles.append(double)
+                        }
+                    }
+                    
+                    print(self.recognizedDoubles)
+                    
+                    for price in self.recognizedDoubles {
+                        var number = price
+                        if number < 1000 {
+                            number *= 1000
+                        }
+                        self.calculatedDoubles.append(number / 20)
+                    }
+                    
+                    print(self.calculatedDoubles)
                 }
             }
             

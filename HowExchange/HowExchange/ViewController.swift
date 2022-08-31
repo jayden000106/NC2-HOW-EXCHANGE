@@ -13,6 +13,8 @@ class ViewController: UIViewController {
         unit.rawValue
     })
     
+//    var resultUnit: ResultUnit = ResultUnit(KRW: 0.0573, USD: 0.0000426, JPY: 0.00591, EUR: 0.0000427)
+    
     @IBOutlet weak var exchangeView: UIView!
     @IBOutlet weak var takeButtonView: UIView!
     @IBOutlet weak var selectButtonView: UIView!
@@ -41,13 +43,13 @@ class ViewController: UIViewController {
         toPickerView.delegate = self
         toTextField.inputView = toPickerView
         
-//        fetchUnit()
+        fetchUnit()
     }
     
     func fetchUnit() {
         let semaphore = DispatchSemaphore(value: 0)
         
-        let url = "https://api.apilayer.com/exchangerates_data/latest?symbols=VND,USD,JPY,EUR&base=KRW"
+        let url = "https://api.apilayer.com/exchangerates_data/latest?symbols=KRW,USD,JPY,EUR&base=VND"
         var request = URLRequest(url: URL(string: url)!, timeoutInterval: Double.infinity)
         request.httpMethod = "GET"
         request.addValue(Storage().apiKey, forHTTPHeaderField: "apikey")
@@ -57,7 +59,17 @@ class ViewController: UIViewController {
                 print(String(describing: error))
                 return
             }
-            print(String(data: data, encoding: .utf8)!)
+            UserDefaults.standard.set(data, forKey: "unit")
+            
+//            let decoder = JSONDecoder()
+//            do {
+//                let unit = try decoder.decode(ParseResult.self, from: data)
+//                self.resultUnit = unit.rates
+//
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+            
             semaphore.signal()
         }
         

@@ -19,6 +19,7 @@
 		B911BB4E28BDF819000EECD8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4D28BDF819000EECD8 /* CameraViewController.swift */; };
 		B911BB5028BE00C3000EECD8 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */; };
 		B911BB5228BE6C7A000EECD8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB5128BE6C7A000EECD8 /* ResultViewController.swift */; };
+		B911BB5528BFD315000EECD8 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB5428BFD315000EECD8 /* ResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B911BB4D28BDF819000EECD8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		B911BB5128BE6C7A000EECD8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B911BB5428BFD315000EECD8 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		B911BB2D28BC84BE000EECD8 /* HowExchange */ = {
 			isa = PBXGroup;
 			children = (
+				B911BB5328BFD2E8000EECD8 /* Cell */,
 				B911BB4C28BDF7C0000EECD8 /* Contoller */,
 				B911BB4828BDDE08000EECD8 /* Model */,
 				B911BB4528BCA9DA000EECD8 /* Extension */,
@@ -115,6 +118,14 @@
 				B911BB5128BE6C7A000EECD8 /* ResultViewController.swift */,
 			);
 			path = Contoller;
+			sourceTree = "<group>";
+		};
+		B911BB5328BFD2E8000EECD8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B911BB5428BFD315000EECD8 /* ResultTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 				B911BB4E28BDF819000EECD8 /* CameraViewController.swift in Sources */,
 				B911BB3128BC84BE000EECD8 /* SceneDelegate.swift in Sources */,
 				B911BB4728BCAA10000EECD8 /* CALayer+.swift in Sources */,
+				B911BB5528BFD315000EECD8 /* ResultTableViewCell.swift in Sources */,
 				B911BB5228BE6C7A000EECD8 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

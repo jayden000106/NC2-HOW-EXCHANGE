@@ -68,6 +68,10 @@ class ResultViewController: UIViewController {
                     }
                     
                     print(self.calculatedDoubles)
+                    
+                    self.resultTableView.delegate = self.self
+                    self.resultTableView.dataSource = self.self
+                    self.resultTableView.updateConstraints()
                 }
             }
             
@@ -83,3 +87,19 @@ class ResultViewController: UIViewController {
         }
     }
 }
+
+extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recognizedDoubles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ResultTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ResultTableViewCell", for: indexPath) as! ResultTableViewCell
+        
+        cell.fromLabel.text = String(recognizedDoubles[indexPath.row])
+        cell.toLabel.text = String(calculatedDoubles[indexPath.row])
+        
+        return cell
+    }
+}
+

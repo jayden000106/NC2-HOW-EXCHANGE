@@ -12,6 +12,7 @@ class ResultViewController: UIViewController {
     var image: UIImage!
     var recognizedDoubles: [Double] = []
     var calculatedDoubles: [Double] = []
+    var resultUnit = ResultUnit(KRW: 0.0573, USD: 0.0000426, JPY: 0.00591, EUR: 0.0000427)
     
     @IBOutlet weak var resultView: UIView!
     
@@ -43,22 +44,26 @@ class ResultViewController: UIViewController {
                 }
                 
                 DispatchQueue.main.async {
-                    print(recognizedStrings)
-                    
                     for string in recognizedStrings {
                         if let double = Double(string) {
-                            self.recognizedDoubles.append(double)
+                            var tmp = double
+                            tmp *= 1000
+                            self.recognizedDoubles.append(tmp)
                         }
                     }
                     
-                    print(self.recognizedDoubles)
-                    
-                    for price in self.recognizedDoubles {
-                        var number = price
-                        if number < 1000 {
-                            number *= 1000
+                    if let data = UserDefaults.standard.data(forKey: "unit") {
+                        let decoder = JSONDecoder()
+                        do {
+                            let unit = try decoder.decode(ParseResult.self, from: data)
+                            self.resultUnit = unit.rates
+                        } catch {
+                            print(error.localizedDescription)
                         }
-                        self.calculatedDoubles.append(number / 20)
+                    }
+                    
+                    for double in self.recognizedDoubles {
+                        self.calculatedDoubles.append(self.resultUnit.KRW * double)
                     }
                     
                     print(self.calculatedDoubles)

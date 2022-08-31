@@ -86,6 +86,14 @@ class ResultViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func changeUnitButtonTapped(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func changeInputButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 extension ResultViewController: UITableViewDelegate, UITableViewDataSource {

@@ -28,10 +28,6 @@ class CalculateViewController: UIViewController {
         
         navigationItem.hidesBackButton = true
         
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.maximumFractionDigits = 2
-        
         resultTableView.layer.cornerRadius = 20
         resultTableView.layer.applyFigmaShadow()
         resultTableHeaderView.layer.cornerRadius = 20
@@ -51,12 +47,17 @@ class CalculateViewController: UIViewController {
                 let recognizedStrings = observations.compactMap { observation in
                     observation.topCandidates(1).first?.string
                 }
+                print(recognizedStrings)
                 
                 DispatchQueue.main.async {
                     for string in recognizedStrings {
-                        if let double = Double(string) {
+                        let trimmedString = self.trimString(string)
+                        print(trimmedString)
+                        if let double = Double(trimmedString) {
                             var tmp = double
-                            tmp *= 1000
+                            if tmp < 1000 {
+                                tmp *= 1000
+                            }
                             self.recognizedDoubles.append(tmp)
                         }
                     }
@@ -79,7 +80,8 @@ class CalculateViewController: UIViewController {
                     self.resultTableView.dataSource = self.self
                     self.resultTableView.showsVerticalScrollIndicator = false
                     self.resultTableView.separatorStyle = .none
-                    if self.calculatedDoubles.count != 0 {
+                    if self.calculatedDoubles.count > 4 {
+                        print(self.calculatedDoubles)
                         self.resultTableView.heightAnchor.constraint(equalToConstant: CGFloat(self.recognizedDoubles.count * 40 + 20)).isActive = true
                         self.scrollView.contentLayoutGuide.heightAnchor.constraint(equalToConstant: self.scrollView.contentSize.height + CGFloat(self.recognizedDoubles.count * 40 + 20 - 400)).isActive = true
                     }
@@ -106,6 +108,15 @@ class CalculateViewController: UIViewController {
     @IBAction func changeMenuButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func trimString(_ string: String) -> String {
+        var trimmed = string
+        if string.contains("vnd") || string.contains("VND") {
+            let range = string.index(string.startIndex, offsetBy: string.count - 4)
+            trimmed = String(trimmed[..<range])
+        }
+        return trimmed
+    }
 }
 
 extension CalculateViewController: UITableViewDelegate, UITableViewDataSource {
@@ -116,8 +127,12 @@ extension CalculateViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ResultTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ResultTableViewCell", for: indexPath) as! ResultTableViewCell
         
-        cell.fromLabel.text = String(recognizedDoubles[indexPath.row])
-        cell.toLabel.text = String(calculatedDoubles[indexPath.row])
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = 2
+        
+        cell.fromLabel.text = numberFormatter.string(for: recognizedDoubles[indexPath.row])
+        cell.toLabel.text = numberFormatter.string(for: calculatedDoubles[indexPath.row])
         cell.selectionStyle = .none
         cell.layer.cornerRadius = 20
         

@@ -29,7 +29,7 @@ class SelectViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let image = imageView.image else { return }
         
-        let destination = segue.destination as! ResultViewController
+        let destination = segue.destination as! CalculateViewController
         destination.image = image
     }
     

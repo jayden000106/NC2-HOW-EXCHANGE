@@ -16,6 +16,8 @@ class SelectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        checkAlbumPermission()
+        
         confirmButton.isEnabled = false
         
         var configuration = PHPickerConfiguration()
@@ -35,6 +37,21 @@ class SelectViewController: UIViewController {
     
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func checkAlbumPermission() {
+        PHPhotoLibrary.requestAuthorization(for: .readWrite, handler: { status in
+            switch status {
+            case .authorized:
+                print("authorized")
+            case .denied:
+                print("denied")
+            case .restricted, .notDetermined:
+                print("not selected")
+            default:
+                break
+            }
+        })
     }
 }
 

@@ -15,12 +15,24 @@ class OnboardingPicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.isNavigationBarHidden = true;
+        
         setButtonView()
     }
     
     private func setButtonView() {
         previousButtonView.layer.applyFigmaShadow()
         nextButtonView.layer.applyFigmaShadow()
+        previousButtonView.layer.cornerRadius = 20
+        nextButtonView.layer.cornerRadius = 20
     }
     
+    @IBAction func previousButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        guard let nextViewController = storyboard?.instantiateViewController(withIdentifier: "OnboardingResultViewController") else { return }
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
 }

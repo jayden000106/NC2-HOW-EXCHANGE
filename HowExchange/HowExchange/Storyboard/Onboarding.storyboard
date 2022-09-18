@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WqB-d0-zMT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -11,7 +11,7 @@
         <!--Onboarding Exchange View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="OnboardingExchangeViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingExchangeViewController" id="Y6W-OH-hqX" customClass="OnboardingExchangeViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="다음">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qAD-J2-qDG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -114,18 +117,19 @@
                             <constraint firstItem="3WL-E7-f0c" firstAttribute="top" secondItem="GDo-Jq-roX" secondAttribute="bottom" constant="20" id="v3Q-bd-2lc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1pO-Eh-CiO"/>
                     <connections>
                         <outlet property="nextButtonView" destination="3WL-E7-f0c" id="mxm-gh-4u0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16" y="70"/>
+            <point key="canvasLocation" x="892.75362318840587" y="69.642857142857139"/>
         </scene>
         <!--Onboarding Pic View Controller-->
         <scene sceneID="fnN-Yb-ymi">
             <objects>
-                <viewController id="dm7-PX-hK9" customClass="OnboardingPicViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingPicViewController" id="dm7-PX-hK9" customClass="OnboardingPicViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8qx-G9-pFL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,6 +154,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="이전">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="previousButtonTapped:" destination="dm7-PX-hK9" eventType="touchUpInside" id="MMh-qe-Xkg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -171,6 +178,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="다음">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="nextButtonTapped:" destination="dm7-PX-hK9" eventType="touchUpInside" id="SkQ-SF-PAS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -252,12 +262,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Acy-7J-wfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="70"/>
+            <point key="canvasLocation" x="1602.8985507246377" y="69.642857142857139"/>
         </scene>
         <!--Onboarding Result View Controller-->
         <scene sceneID="u17-od-UhK">
             <objects>
-                <viewController id="kw8-pp-2tH" customClass="OnboardingResultViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingResultViewController" id="kw8-pp-2tH" customClass="OnboardingResultViewController" customModule="HowExchange" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gx0-2P-1c3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,6 +285,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="이전">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="previousButtonTapped:" destination="kw8-pp-2tH" eventType="touchUpInside" id="qZ2-oM-mYq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -296,6 +309,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="다음">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="nextButtonTapped:" destination="kw8-pp-2tH" eventType="touchUpInside" id="oDn-7r-lbH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -384,7 +400,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdG-4v-sdi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="70"/>
+            <point key="canvasLocation" x="2300" y="69.642857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0eO-9O-IeD">
+            <objects>
+                <navigationController storyboardIdentifier="OnboardingNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="WqB-d0-zMT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ryp-gC-bnX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="wdF-jB-uiA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UvV-rd-f4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>

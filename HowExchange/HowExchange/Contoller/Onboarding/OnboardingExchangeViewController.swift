@@ -14,11 +14,18 @@ class OnboardingExchangeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.isNavigationBarHidden = true;
+        
         setButtonView()
     }
     
     private func setButtonView() {
         nextButtonView.layer.applyFigmaShadow()
+        nextButtonView.layer.cornerRadius = 20
     }
     
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        guard let nextViewController = storyboard?.instantiateViewController(withIdentifier: "OnboardingPicViewController") else { return }
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
 }

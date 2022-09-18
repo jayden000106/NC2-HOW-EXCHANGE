@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.hidesBackButton = true
+        
         exchangeView.layer.cornerRadius = 20
         exchangeView.layer.applyFigmaShadow()
         

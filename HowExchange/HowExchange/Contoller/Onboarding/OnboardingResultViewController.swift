@@ -15,12 +15,26 @@ class OnboardingResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.isNavigationBarHidden = true
+        
         setButtonView()
     }
     
     private func setButtonView() {
         previousButtonView.layer.applyFigmaShadow()
         nextButtonView.layer.applyFigmaShadow()
+        previousButtonView.layer.cornerRadius = 20
+        nextButtonView.layer.cornerRadius = 20
     }
     
+    @IBAction func previousButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        let nextStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = nextStoryboard.instantiateViewController(withIdentifier: "ViewController")
+        navigationController?.pushViewController(nextViewController, animated: true)
+        navigationController?.isNavigationBarHidden = false
+    }
 }

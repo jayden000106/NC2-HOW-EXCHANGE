@@ -21,6 +21,9 @@
 		B911BB5528BFD315000EECD8 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB5428BFD315000EECD8 /* ResultTableViewCell.swift */; };
 		B911BB5728C0A028000EECD8 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB5628C0A028000EECD8 /* CalculateViewController.swift */; };
 		B983205F28D73B77003AFEF0 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B983205E28D73B77003AFEF0 /* Onboarding.storyboard */; };
+		B983206628D76377003AFEF0 /* OnboardingExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983206528D76377003AFEF0 /* OnboardingExchangeViewController.swift */; };
+		B983206828D76389003AFEF0 /* OnboardingPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983206728D76389003AFEF0 /* OnboardingPicViewController.swift */; };
+		B983206A28D7639B003AFEF0 /* OnboardingResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983206928D7639B003AFEF0 /* OnboardingResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		B911BB5428BFD315000EECD8 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		B911BB5628C0A028000EECD8 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 		B983205E28D73B77003AFEF0 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		B983206528D76377003AFEF0 /* OnboardingExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingExchangeViewController.swift; sourceTree = "<group>"; };
+		B983206728D76389003AFEF0 /* OnboardingPicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPicViewController.swift; sourceTree = "<group>"; };
+		B983206928D7639B003AFEF0 /* OnboardingResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 		B911BB4C28BDF7C0000EECD8 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
+				B983206028D762DF003AFEF0 /* Onboarding */,
 				B911BB4D28BDF819000EECD8 /* CameraViewController.swift */,
 				B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */,
 				B911BB5628C0A028000EECD8 /* CalculateViewController.swift */,
@@ -137,6 +144,16 @@
 				B983205E28D73B77003AFEF0 /* Onboarding.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B983206028D762DF003AFEF0 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B983206528D76377003AFEF0 /* OnboardingExchangeViewController.swift */,
+				B983206728D76389003AFEF0 /* OnboardingPicViewController.swift */,
+				B983206928D7639B003AFEF0 /* OnboardingResultViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,13 +230,16 @@
 			files = (
 				B911BB3328BC84BE000EECD8 /* ViewController.swift in Sources */,
 				B911BB4428BC8811000EECD8 /* Storage.swift in Sources */,
+				B983206828D76389003AFEF0 /* OnboardingPicViewController.swift in Sources */,
 				B911BB2F28BC84BE000EECD8 /* AppDelegate.swift in Sources */,
 				B911BB5728C0A028000EECD8 /* CalculateViewController.swift in Sources */,
 				B911BB4A28BDDE1D000EECD8 /* Unit.swift in Sources */,
 				B911BB5028BE00C3000EECD8 /* SelectViewController.swift in Sources */,
+				B983206628D76377003AFEF0 /* OnboardingExchangeViewController.swift in Sources */,
 				B911BB4E28BDF819000EECD8 /* CameraViewController.swift in Sources */,
 				B911BB3128BC84BE000EECD8 /* SceneDelegate.swift in Sources */,
 				B911BB4728BCAA10000EECD8 /* CALayer+.swift in Sources */,
+				B983206A28D7639B003AFEF0 /* OnboardingResultViewController.swift in Sources */,
 				B911BB5528BFD315000EECD8 /* ResultTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

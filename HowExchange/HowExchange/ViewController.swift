@@ -13,8 +13,6 @@ class ViewController: UIViewController {
         unit.rawValue
     })
     
-//    var resultUnit: ResultUnit = ResultUnit(KRW: 0.0573, USD: 0.0000426, JPY: 0.00591, EUR: 0.0000427)
-    
     @IBOutlet weak var exchangeView: UIView!
     @IBOutlet weak var takeButtonView: UIView!
     @IBOutlet weak var selectButtonView: UIView!
@@ -60,15 +58,6 @@ class ViewController: UIViewController {
                 return
             }
             UserDefaults.standard.set(data, forKey: "unit")
-            
-//            let decoder = JSONDecoder()
-//            do {
-//                let unit = try decoder.decode(ParseResult.self, from: data)
-//                self.resultUnit = unit.rates
-//
-//            } catch {
-//                print(error.localizedDescription)
-//            }
             
             semaphore.signal()
         }

@@ -22,6 +22,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var changeUnitButtonView: UIView!
     @IBOutlet weak var changePhotoButtonView: UIView!
     @IBOutlet weak var resultTableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var progressView: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +91,12 @@ class CalculateViewController: UIViewController {
             }
             
             recognizeTextRequest.recognitionLevel = .accurate
+            recognizeTextRequest.progressHandler = { (request, double, error) in
+                print("progress : \(double)")
+                DispatchQueue.main.async {
+                    self.progressView.progress = Float(double)
+                }
+            }
             
             DispatchQueue.global(qos: .userInitiated).async {
                 do {

@@ -328,6 +328,23 @@
                                                                 <constraint firstItem="3e9-GZ-ooW" firstAttribute="leading" secondItem="6Pc-qW-Qaa" secondAttribute="leading" constant="20" id="QGE-qe-lp7"/>
                                                             </constraints>
                                                         </view>
+                                                        <view key="tableFooterView" contentMode="scaleToFill" id="MWQ-vH-9eh">
+                                                            <rect key="frame" x="0.0" y="167" width="374" height="180"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TLr-JL-keP">
+                                                                    <rect key="frame" x="112" y="88" width="150" height="4"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="150" id="cdB-hC-Kbo"/>
+                                                                    </constraints>
+                                                                </progressView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="TLr-JL-keP" firstAttribute="centerY" secondItem="MWQ-vH-9eh" secondAttribute="centerY" id="AZz-cX-aBa"/>
+                                                                <constraint firstItem="TLr-JL-keP" firstAttribute="centerX" secondItem="MWQ-vH-9eh" secondAttribute="centerX" id="QMy-l9-7bt"/>
+                                                            </constraints>
+                                                        </view>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultTableViewCell" rowHeight="40" id="0aa-jo-QSM" customClass="ResultTableViewCell" customModule="HowExchange" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="104.5" width="374" height="40"/>
@@ -467,6 +484,7 @@
                         <outlet property="buttonStackView" destination="LNK-M7-5fH" id="CSm-D0-EOg"/>
                         <outlet property="changePhotoButtonView" destination="cIZ-sD-BwX" id="7Yt-iM-jhW"/>
                         <outlet property="changeUnitButtonView" destination="4tv-zx-Ffo" id="sab-9F-R3A"/>
+                        <outlet property="progressView" destination="TLr-JL-keP" id="Y3O-Sl-5gW"/>
                         <outlet property="resultTableHeaderView" destination="6Pc-qW-Qaa" id="1vy-Vw-2Rh"/>
                         <outlet property="resultTableView" destination="zA0-m9-teD" id="FmN-XJ-BfC"/>
                         <outlet property="resultTableViewHeight" destination="sOB-MP-dtR" id="RtR-ZV-v5u"/>

@@ -67,6 +67,11 @@ class ViewController: UIViewController {
         task.resume()
         semaphore.wait()
     }
+    
+    @IBAction func selectButton(_ sender: UIButton) {
+        guard let selectViewController = storyboard?.instantiateViewController(withIdentifier: "SelectViewController") else { return }
+        navigationController?.pushViewController(selectViewController, animated: true)
+    }
 }
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {

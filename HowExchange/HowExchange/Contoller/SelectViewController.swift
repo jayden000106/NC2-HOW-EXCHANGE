@@ -20,6 +20,17 @@ class SelectViewController: UIViewController {
         
         confirmButton.isEnabled = false
         
+//        var configuration = PHPickerConfiguration()
+//        configuration.filter = .images
+//
+//        let picker = PHPickerViewController(configuration: configuration)
+//        picker.delegate = self
+//        self.present(picker, animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         var configuration = PHPickerConfiguration()
         configuration.filter = .images
         

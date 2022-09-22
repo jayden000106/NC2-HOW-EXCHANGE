@@ -11,6 +11,7 @@ enum MonetaryUnit: String, CaseIterable {
     case KRW = "KRW(대한민국 원)"
     case USD = "USD(미국 달러)"
     case VND = "VND(베트남 동)"
+    case JPY = "JPY(일본 엔)"
 }
 
 struct ParseResult: Codable {

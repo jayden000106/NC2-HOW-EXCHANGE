@@ -69,8 +69,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func selectButton(_ sender: UIButton) {
-        guard let selectViewController = storyboard?.instantiateViewController(withIdentifier: "SelectViewController") else { return }
-        navigationController?.pushViewController(selectViewController, animated: true)
+        if fromTextField.text == toTextField.text {
+            let sameUnitAlert = UIAlertController(title: "같은 화폐 단위 선택", message: "같은 화폐 단위를 선택하셨습니다,\n다른 화폐 단위를 선택해주세요!", preferredStyle: UIAlertController.Style.alert)
+            let confirmAlertAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil)
+            sameUnitAlert.addAction(confirmAlertAction)
+            present(sameUnitAlert, animated: true, completion: nil)
+        } else {
+            UserDefaults.standard.set(fromTextField.text, forKey: "from")
+            UserDefaults.standard.set(toTextField.text, forKey: "to")
+            
+            guard let selectViewController = storyboard?.instantiateViewController(withIdentifier: "SelectViewController") else { return }
+            navigationController?.pushViewController(selectViewController, animated: true)
+        }
     }
 }
 

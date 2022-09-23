@@ -24,6 +24,9 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var resultTableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var progressView: UIProgressView!
     
+    @IBOutlet weak var fromLabel: UILabel!
+    @IBOutlet weak var toLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +41,9 @@ class CalculateViewController: UIViewController {
         
         changePhotoButtonView.layer.cornerRadius = 20
         changePhotoButtonView.layer.applyFigmaShadow()
+        
+        fromLabel.text = UserDefaults.standard.string(forKey: "from")
+        toLabel.text = UserDefaults.standard.string(forKey: "to")
         
         if let cgImage = image.cgImage {
             let requestHandler = VNImageRequestHandler(cgImage: cgImage)

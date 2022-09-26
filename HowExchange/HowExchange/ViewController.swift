@@ -8,22 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let selectableLine = 1
-    let caseList = MonetaryUnit.allCases.map({ unit in
+    private let selectableLine = 1
+    private let moneyUnitCase = MonetaryUnit.allCases.map({ unit in
         unit.rawValue
     })
     
-    @IBOutlet weak var exchangeView: UIView!
-    @IBOutlet weak var takeButtonView: UIView!
-    @IBOutlet weak var selectButtonView: UIView!
+    @IBOutlet weak private var exchangeView: UIView!
+    @IBOutlet weak private var takeButtonView: UIView!
+    @IBOutlet weak private var selectButtonView: UIView!
     
-    @IBOutlet weak var fromTextField: UITextField!
-    @IBOutlet weak var toTextField: UITextField!
+    @IBOutlet weak private var fromTextField: UITextField!
+    @IBOutlet weak private var toTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.hidesBackButton = true
+        setViewAppearence()
+        setPickerView()
+        fetchUnit()
+    }
+    
+    private func setViewAppearence() {
+        setNavigationBar()
         
         exchangeView.layer.cornerRadius = 20
         exchangeView.layer.applyFigmaShadow()
@@ -32,7 +37,13 @@ class ViewController: UIViewController {
         takeButtonView.layer.applyFigmaShadow()
         selectButtonView.layer.cornerRadius = 20
         selectButtonView.layer.applyFigmaShadow()
-        
+    }
+    
+    private func setNavigationBar() {
+        navigationItem.hidesBackButton = true
+    }
+    
+    private func setPickerView() {
         let fromPickerView = UIPickerView()
         fromPickerView.tag = 1
         fromPickerView.delegate = self
@@ -42,11 +53,9 @@ class ViewController: UIViewController {
         toPickerView.tag = 2
         toPickerView.delegate = self
         toTextField.inputView = toPickerView
-        
-//        fetchUnit()
     }
     
-    func fetchUnit() {
+    private func fetchUnit() {
         let semaphore = DispatchSemaphore(value: 0)
         
         let url = "https://api.apilayer.com/exchangerates_data/latest?symbols=KRW,USD,JPY,EUR&base=VND"
@@ -90,19 +99,19 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return caseList.count
+        return moneyUnitCase.count
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return caseList[row]
+        return moneyUnitCase[row]
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
-            fromTextField.text = caseList[row]
+            fromTextField.text = moneyUnitCase[row]
             fromTextField.resignFirstResponder()
         } else {
-            toTextField.text = caseList[row]
+            toTextField.text = moneyUnitCase[row]
             toTextField.resignFirstResponder()
         }
     }

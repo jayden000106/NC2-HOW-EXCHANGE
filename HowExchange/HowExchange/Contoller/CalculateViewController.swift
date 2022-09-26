@@ -10,27 +10,33 @@ import Vision
 
 class CalculateViewController: UIViewController {
     var image: UIImage!
-    var recognizedDoubles: [Double] = []
-    var calculatedDoubles: [Double] = []
-    var resultUnit = ResultUnit(KRW: 0.0573, USD: 0.0000426, JPY: 0.00591, EUR: 0.0000427)
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var buttonStackView: UIStackView!
-    @IBOutlet weak var resultTableView: UITableView!
-    @IBOutlet weak var resultTableHeaderView: UIView!
-    @IBOutlet weak var changeUnitButtonView: UIView!
-    @IBOutlet weak var changePhotoButtonView: UIView!
-    @IBOutlet weak var resultTableViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var progressView: UIProgressView!
+    private var recognizedDoubles: [Double] = []
+    private var calculatedDoubles: [Double] = []
+    private var resultUnit = ResultUnit(KRW: 0.0573, USD: 0.0000426, JPY: 0.00591, EUR: 0.0000427)
     
-    @IBOutlet weak var fromLabel: UILabel!
-    @IBOutlet weak var toLabel: UILabel!
+    @IBOutlet weak private var scrollView: UIScrollView!
+    @IBOutlet weak private var stackView: UIStackView!
+    
+    @IBOutlet weak private var buttonStackView: UIStackView!
+    @IBOutlet weak private var resultTableView: UITableView!
+    @IBOutlet weak private var resultTableHeaderView: UIView!
+    @IBOutlet weak private var changeUnitButtonView: UIView!
+    @IBOutlet weak private var changePhotoButtonView: UIView!
+    @IBOutlet weak private var resultTableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak private var progressView: UIProgressView!
+    
+    @IBOutlet weak private var fromLabel: UILabel!
+    @IBOutlet weak private var toLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.hidesBackButton = true
+        setViewAppearence()
+        excuteTextRecognize()
+    }
+    
+    private func setViewAppearence() {
+        setNavigationBar()
         
         resultTableView.layer.cornerRadius = 20
         resultTableView.layer.applyFigmaShadow()
@@ -44,7 +50,13 @@ class CalculateViewController: UIViewController {
         
         fromLabel.text = UserDefaults.standard.string(forKey: "from")
         toLabel.text = UserDefaults.standard.string(forKey: "to")
-        
+    }
+    
+    private func setNavigationBar() {
+        navigationItem.hidesBackButton = true
+    }
+    
+    private func excuteTextRecognize() {
         if let cgImage = image.cgImage {
             let requestHandler = VNImageRequestHandler(cgImage: cgImage)
             
@@ -114,14 +126,6 @@ class CalculateViewController: UIViewController {
         }
     }
     
-    @IBAction func changeUnitButtonTapped(_ sender: UIButton) {
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
-    @IBAction func changeMenuButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    
     func trimString(_ string: String) -> String {
         var trimmed = string
         if string.contains("vnd") || string.contains("VND") {
@@ -129,6 +133,14 @@ class CalculateViewController: UIViewController {
             trimmed = String(trimmed[..<range])
         }
         return trimmed
+    }
+    
+    @IBAction func changeUnitButtonTapped(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func changeMenuButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 }
 

@@ -14,17 +14,20 @@ class OnboardingResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.isNavigationBarHidden = true
-        
-        setButtonView()
+        setViewAppearence()
     }
     
-    private func setButtonView() {
+    private func setViewAppearence() {
+        setNavigationBar()
+        
         previousButtonView.layer.applyFigmaShadow()
         nextButtonView.layer.applyFigmaShadow()
         previousButtonView.layer.cornerRadius = 20
         nextButtonView.layer.cornerRadius = 20
+    }
+    
+    private func setNavigationBar() {
+        navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func previousButtonTapped(_ sender: UIButton) {

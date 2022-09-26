@@ -13,15 +13,18 @@ class OnboardingExchangeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.isNavigationBarHidden = true;
-        
-        setButtonView()
+        setViewAppearence()
     }
     
-    private func setButtonView() {
+    private func setViewAppearence() {
+        setNavigationBar()
+        
         nextButtonView.layer.applyFigmaShadow()
         nextButtonView.layer.cornerRadius = 20
+    }
+    
+    private func setNavigationBar() {
+        navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {

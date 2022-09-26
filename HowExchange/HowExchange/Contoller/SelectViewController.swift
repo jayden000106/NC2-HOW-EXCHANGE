@@ -10,33 +10,18 @@ import PhotosUI
 
 class SelectViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var confirmButton: UIBarButtonItem!
+    @IBOutlet weak private var imageView: UIImageView!
+    @IBOutlet weak private var confirmButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         checkAlbumPermission()
-        
-        confirmButton.isEnabled = false
-        
-//        var configuration = PHPickerConfiguration()
-//        configuration.filter = .images
-//
-//        let picker = PHPickerViewController(configuration: configuration)
-//        picker.delegate = self
-//        self.present(picker, animated: true, completion: nil)
+        setViewAppearence()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        var configuration = PHPickerConfiguration()
-        configuration.filter = .images
-        
-        let picker = PHPickerViewController(configuration: configuration)
-        picker.delegate = self
-        self.present(picker, animated: true, completion: nil)
+        setPHPicker()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,6 +29,19 @@ class SelectViewController: UIViewController {
         
         let destination = segue.destination as! CalculateViewController
         destination.image = image
+    }
+    
+    private func setViewAppearence() {
+        confirmButton.isEnabled = false
+    }
+    
+    private func setPHPicker() {
+        var configuration = PHPickerConfiguration()
+        configuration.filter = .images
+        
+        let picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
     }
     
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {

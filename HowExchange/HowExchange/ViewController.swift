@@ -43,6 +43,8 @@ class ViewController: UIViewController {
         navigationItem.hidesBackButton = true
     }
     
+    // Picker마다 태그를 설정해서 Delegate에서 선택한 TextField 변경
+    // https://stackoverflow.com/questions/27642164/how-to-use-two-uipickerviews-in-one-view-controller
     private func setPickerView() {
         let fromPickerView = UIPickerView()
         fromPickerView.tag = 1

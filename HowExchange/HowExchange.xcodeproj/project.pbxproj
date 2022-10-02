@@ -20,6 +20,7 @@
 		B911BB5028BE00C3000EECD8 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */; };
 		B911BB5528BFD315000EECD8 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB5428BFD315000EECD8 /* ResultTableViewCell.swift */; };
 		B911BB5728C0A028000EECD8 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB5628C0A028000EECD8 /* CalculateViewController.swift */; };
+		B93D78A028E9CA4800CE9AB0 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D789F28E9CA4800CE9AB0 /* UINavigationController+.swift */; };
 		B983205F28D73B77003AFEF0 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B983205E28D73B77003AFEF0 /* Onboarding.storyboard */; };
 		B983206628D76377003AFEF0 /* OnboardingExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983206528D76377003AFEF0 /* OnboardingExchangeViewController.swift */; };
 		B983206828D76389003AFEF0 /* OnboardingPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983206728D76389003AFEF0 /* OnboardingPicViewController.swift */; };
@@ -42,6 +43,7 @@
 		B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		B911BB5428BFD315000EECD8 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		B911BB5628C0A028000EECD8 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		B93D789F28E9CA4800CE9AB0 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		B983205E28D73B77003AFEF0 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		B983206528D76377003AFEF0 /* OnboardingExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingExchangeViewController.swift; sourceTree = "<group>"; };
 		B983206728D76389003AFEF0 /* OnboardingPicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPicViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				B911BB4628BCAA10000EECD8 /* CALayer+.swift */,
+				B93D789F28E9CA4800CE9AB0 /* UINavigationController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				B911BB5728C0A028000EECD8 /* CalculateViewController.swift in Sources */,
 				B911BB4A28BDDE1D000EECD8 /* Unit.swift in Sources */,
 				B911BB5028BE00C3000EECD8 /* SelectViewController.swift in Sources */,
+				B93D78A028E9CA4800CE9AB0 /* UINavigationController+.swift in Sources */,
 				B983206628D76377003AFEF0 /* OnboardingExchangeViewController.swift in Sources */,
 				B911BB4E28BDF819000EECD8 /* CameraViewController.swift in Sources */,
 				B911BB3128BC84BE000EECD8 /* SceneDelegate.swift in Sources */,

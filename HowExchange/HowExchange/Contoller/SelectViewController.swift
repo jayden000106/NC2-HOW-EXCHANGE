@@ -48,6 +48,8 @@ class SelectViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    // 앨범 접근 권한 요청
+    // https://hello-bryan.tistory.com/355
     func checkAlbumPermission() {
         PHPhotoLibrary.requestAuthorization(for: .readWrite, handler: { status in
             switch status {

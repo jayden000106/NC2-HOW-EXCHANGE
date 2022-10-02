@@ -56,6 +56,8 @@ class CalculateViewController: UIViewController {
         navigationItem.hidesBackButton = true
     }
     
+    // Vison의 텍스트 인식 기능 사용
+    // https://medium.com/@yossabourne/how-to-perform-text-recognition-in-swift-using-vision-f0dc4029cf37
     private func excuteTextRecognize() {
         if let cgImage = image.cgImage {
             let requestHandler = VNImageRequestHandler(cgImage: cgImage)

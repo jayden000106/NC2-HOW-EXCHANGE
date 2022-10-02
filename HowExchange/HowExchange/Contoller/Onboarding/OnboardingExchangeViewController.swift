@@ -9,7 +9,7 @@ import UIKit
 
 class OnboardingExchangeViewController: UIViewController {
     
-    @IBOutlet weak var nextButtonView: UIView!
+    @IBOutlet private weak var nextButtonView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class OnboardingExchangeViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+    @IBAction private func nextButtonTapped(_ sender: UIButton) {
         guard let nextViewController = storyboard?.instantiateViewController(withIdentifier: "OnboardingPicViewController") else { return }
         navigationController?.pushViewController(nextViewController, animated: true)
     }

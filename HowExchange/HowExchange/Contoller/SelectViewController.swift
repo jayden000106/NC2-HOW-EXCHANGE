@@ -51,13 +51,13 @@ class SelectViewController: UIViewController {
         self.present(picker, animated: true, completion: nil)
     }
     
-    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction private func backButtonTapped(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
     
     // 앨범 접근 권한 요청
     // https://hello-bryan.tistory.com/355
-    func checkAlbumPermission() {
+    private func checkAlbumPermission() {
         PHPhotoLibrary.requestAuthorization(for: .readWrite, handler: { status in
             switch status {
             case .authorized:

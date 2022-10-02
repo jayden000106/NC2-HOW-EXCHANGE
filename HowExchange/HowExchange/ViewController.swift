@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         semaphore.wait()
     }
     
-    @IBAction func selectButton(_ sender: UIButton) {
+    @IBAction private func selectButton(_ sender: UIButton) {
         if fromTextField.text == toTextField.text {
             let sameUnitAlert = UIAlertController(title: "같은 화폐 단위 선택", message: "같은 화폐 단위를 선택하셨습니다,\n다른 화폐 단위를 선택해주세요!", preferredStyle: UIAlertController.Style.alert)
             let confirmAlertAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil)

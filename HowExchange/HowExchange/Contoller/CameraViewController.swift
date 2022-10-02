@@ -9,12 +9,12 @@ import UIKit
 import AVFoundation
 
 class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
-    var captureSession: AVCaptureSession!
-    var stillImageOutput: AVCapturePhotoOutput!
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer!
+    private var captureSession: AVCaptureSession!
+    private var stillImageOutput: AVCapturePhotoOutput!
+    private var videoPreviewLayer: AVCaptureVideoPreviewLayer!
     
-    @IBOutlet weak var previewView: UIView!
-    @IBOutlet weak var takePhotoButton: UIButton!
+    @IBOutlet private weak var previewView: UIView!
+    @IBOutlet private weak var takePhotoButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         self.captureSession.stopRunning()
     }
     
-    func setupLivePreview() {
+    private func setupLivePreview() {
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         
         videoPreviewLayer.videoGravity = .resizeAspectFill
@@ -74,12 +74,12 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         navigationController?.pushViewController(selectImageViewController, animated: true)
     }
     
-    @IBAction func takePhotoButtonTapped(_ sender: UIButton) {
+    @IBAction private func takePhotoButtonTapped(_ sender: UIButton) {
         let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
         stillImageOutput.capturePhoto(with: settings, delegate: self)
     }
     
-    @IBAction func backButtonTapped(_ sender: Any) {
+    @IBAction private func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 }

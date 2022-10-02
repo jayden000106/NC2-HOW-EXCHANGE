@@ -9,8 +9,8 @@ import UIKit
 
 class OnboardingResultViewController: UIViewController {
     
-    @IBOutlet weak var previousButtonView: UIView!
-    @IBOutlet weak var nextButtonView: UIView!
+    @IBOutlet private weak var previousButtonView: UIView!
+    @IBOutlet private weak var nextButtonView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +30,11 @@ class OnboardingResultViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
-    @IBAction func previousButtonTapped(_ sender: UIButton) {
+    @IBAction private func previousButtonTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+    @IBAction private func nextButtonTapped(_ sender: UIButton) {
         let nextStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = nextStoryboard.instantiateViewController(withIdentifier: "ViewController")
         navigationController?.pushViewController(nextViewController, animated: true)

@@ -25,6 +25,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak private var changePhotoButtonView: UIView!
     @IBOutlet weak private var resultTableViewHeight: NSLayoutConstraint!
     @IBOutlet weak private var progressView: UIProgressView!
+    @IBOutlet weak private var progressContainerView: UIView!
     
     @IBOutlet weak private var fromLabel: UILabel!
     @IBOutlet weak private var toLabel: UILabel!
@@ -115,6 +116,9 @@ class CalculateViewController: UIViewController {
                 print("progress : \(double)")
                 DispatchQueue.main.async {
                     self.progressView.progress = Float(double)
+                    if double >= 1 {
+                        self.progressContainerView.layer.opacity = 0
+                    }
                 }
             }
             
@@ -128,7 +132,7 @@ class CalculateViewController: UIViewController {
         }
     }
     
-    func trimString(_ string: String) -> String {
+    private func trimString(_ string: String) -> String {
         var trimmed = string
         if string.contains("vnd") || string.contains("VND") {
             let range = string.index(string.startIndex, offsetBy: string.count - 4)
@@ -137,11 +141,11 @@ class CalculateViewController: UIViewController {
         return trimmed
     }
     
-    @IBAction func changeUnitButtonTapped(_ sender: UIButton) {
+    @IBAction private func changeUnitButtonTapped(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }
     
-    @IBAction func changeMenuButtonTapped(_ sender: Any) {
+    @IBAction private func changeMenuButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 }

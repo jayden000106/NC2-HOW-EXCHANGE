@@ -485,6 +485,7 @@
                         <outlet property="changePhotoButtonView" destination="cIZ-sD-BwX" id="7Yt-iM-jhW"/>
                         <outlet property="changeUnitButtonView" destination="4tv-zx-Ffo" id="sab-9F-R3A"/>
                         <outlet property="fromLabel" destination="sq7-jJ-cku" id="Zxy-85-StG"/>
+                        <outlet property="progressContainerView" destination="MWQ-vH-9eh" id="rKw-N6-beA"/>
                         <outlet property="progressView" destination="TLr-JL-keP" id="Y3O-Sl-5gW"/>
                         <outlet property="resultTableHeaderView" destination="6Pc-qW-Qaa" id="1vy-Vw-2Rh"/>
                         <outlet property="resultTableView" destination="zA0-m9-teD" id="FmN-XJ-BfC"/>

@@ -14,6 +14,17 @@
 		B911BB3828BC84C0000EECD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B911BB3728BC84C0000EECD8 /* Assets.xcassets */; };
 		B911BB3B28BC84C0000EECD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B911BB3928BC84C0000EECD8 /* LaunchScreen.storyboard */; };
 		B911BB4428BC8811000EECD8 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4328BC8811000EECD8 /* Storage.swift */; };
+		B911BB4728BCAA10000EECD8 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4628BCAA10000EECD8 /* CALayer+.swift */; };
+		B911BB4A28BDDE1D000EECD8 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4928BDDE1D000EECD8 /* Unit.swift */; };
+		B911BB4E28BDF819000EECD8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4D28BDF819000EECD8 /* CameraViewController.swift */; };
+		B911BB5028BE00C3000EECD8 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */; };
+		B911BB5528BFD315000EECD8 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB5428BFD315000EECD8 /* ResultTableViewCell.swift */; };
+		B911BB5728C0A028000EECD8 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911BB5628C0A028000EECD8 /* CalculateViewController.swift */; };
+		B93D78A028E9CA4800CE9AB0 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D789F28E9CA4800CE9AB0 /* UINavigationController+.swift */; };
+		B983205F28D73B77003AFEF0 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B983205E28D73B77003AFEF0 /* Onboarding.storyboard */; };
+		B983206628D76377003AFEF0 /* OnboardingExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983206528D76377003AFEF0 /* OnboardingExchangeViewController.swift */; };
+		B983206828D76389003AFEF0 /* OnboardingPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983206728D76389003AFEF0 /* OnboardingPicViewController.swift */; };
+		B983206A28D7639B003AFEF0 /* OnboardingResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983206928D7639B003AFEF0 /* OnboardingResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,17 @@
 		B911BB3A28BC84C0000EECD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B911BB3C28BC84C0000EECD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B911BB4328BC8811000EECD8 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		B911BB4628BCAA10000EECD8 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
+		B911BB4928BDDE1D000EECD8 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		B911BB4D28BDF819000EECD8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		B911BB5428BFD315000EECD8 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		B911BB5628C0A028000EECD8 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		B93D789F28E9CA4800CE9AB0 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		B983205E28D73B77003AFEF0 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		B983206528D76377003AFEF0 /* OnboardingExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingExchangeViewController.swift; sourceTree = "<group>"; };
+		B983206728D76389003AFEF0 /* OnboardingPicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPicViewController.swift; sourceTree = "<group>"; };
+		B983206928D7639B003AFEF0 /* OnboardingResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,11 @@
 		B911BB2D28BC84BE000EECD8 /* HowExchange */ = {
 			isa = PBXGroup;
 			children = (
+				B983205D28D73B55003AFEF0 /* Storyboard */,
+				B911BB5328BFD2E8000EECD8 /* Cell */,
+				B911BB4C28BDF7C0000EECD8 /* Contoller */,
+				B911BB4828BDDE08000EECD8 /* Model */,
+				B911BB4528BCA9DA000EECD8 /* Extension */,
 				B911BB4228BC87CC000EECD8 /* Service */,
 				B911BB2E28BC84BE000EECD8 /* AppDelegate.swift */,
 				B911BB3028BC84BE000EECD8 /* SceneDelegate.swift */,
@@ -76,6 +103,60 @@
 				B911BB4328BC8811000EECD8 /* Storage.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B911BB4528BCA9DA000EECD8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B911BB4628BCAA10000EECD8 /* CALayer+.swift */,
+				B93D789F28E9CA4800CE9AB0 /* UINavigationController+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B911BB4828BDDE08000EECD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B911BB4928BDDE1D000EECD8 /* Unit.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B911BB4C28BDF7C0000EECD8 /* Contoller */ = {
+			isa = PBXGroup;
+			children = (
+				B983206028D762DF003AFEF0 /* Onboarding */,
+				B911BB4D28BDF819000EECD8 /* CameraViewController.swift */,
+				B911BB4F28BE00C3000EECD8 /* SelectViewController.swift */,
+				B911BB5628C0A028000EECD8 /* CalculateViewController.swift */,
+			);
+			path = Contoller;
+			sourceTree = "<group>";
+		};
+		B911BB5328BFD2E8000EECD8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B911BB5428BFD315000EECD8 /* ResultTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B983205D28D73B55003AFEF0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B983205E28D73B77003AFEF0 /* Onboarding.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B983206028D762DF003AFEF0 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B983206528D76377003AFEF0 /* OnboardingExchangeViewController.swift */,
+				B983206728D76389003AFEF0 /* OnboardingPicViewController.swift */,
+				B983206928D7639B003AFEF0 /* OnboardingResultViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +220,7 @@
 				B911BB3B28BC84C0000EECD8 /* LaunchScreen.storyboard in Resources */,
 				B911BB3828BC84C0000EECD8 /* Assets.xcassets in Resources */,
 				B911BB3628BC84BE000EECD8 /* Main.storyboard in Resources */,
+				B983205F28D73B77003AFEF0 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +233,18 @@
 			files = (
 				B911BB3328BC84BE000EECD8 /* ViewController.swift in Sources */,
 				B911BB4428BC8811000EECD8 /* Storage.swift in Sources */,
+				B983206828D76389003AFEF0 /* OnboardingPicViewController.swift in Sources */,
 				B911BB2F28BC84BE000EECD8 /* AppDelegate.swift in Sources */,
+				B911BB5728C0A028000EECD8 /* CalculateViewController.swift in Sources */,
+				B911BB4A28BDDE1D000EECD8 /* Unit.swift in Sources */,
+				B911BB5028BE00C3000EECD8 /* SelectViewController.swift in Sources */,
+				B93D78A028E9CA4800CE9AB0 /* UINavigationController+.swift in Sources */,
+				B983206628D76377003AFEF0 /* OnboardingExchangeViewController.swift in Sources */,
+				B911BB4E28BDF819000EECD8 /* CameraViewController.swift in Sources */,
 				B911BB3128BC84BE000EECD8 /* SceneDelegate.swift in Sources */,
+				B911BB4728BCAA10000EECD8 /* CALayer+.swift in Sources */,
+				B983206A28D7639B003AFEF0 /* OnboardingResultViewController.swift in Sources */,
+				B911BB5528BFD315000EECD8 /* ResultTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +406,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jungjeehouk.HowExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -342,6 +437,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jungjeehouk.HowExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

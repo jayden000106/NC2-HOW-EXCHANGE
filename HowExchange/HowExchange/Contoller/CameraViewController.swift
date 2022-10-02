@@ -18,8 +18,6 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        takePhotoButton.bounds = CGRect(x: 0, y: 0, width: 60, height: 60)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,17 +52,17 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.captureSession.stopRunning()
+    }
+    
     func setupLivePreview() {
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         
-        videoPreviewLayer.videoGravity = .resizeAspect
+        videoPreviewLayer.videoGravity = .resizeAspectFill
         videoPreviewLayer.connection?.videoOrientation = .portrait
         previewView.layer.addSublayer(videoPreviewLayer)
-    }
-    
-    @IBAction func takePhotoButtonTapped(_ sender: UIButton) {
-        let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
-        stillImageOutput.capturePhoto(with: settings, delegate: self)
     }
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
@@ -76,9 +74,9 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         navigationController?.pushViewController(selectImageViewController, animated: true)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.captureSession.stopRunning()
+    @IBAction func takePhotoButtonTapped(_ sender: UIButton) {
+        let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
+        stillImageOutput.capturePhoto(with: settings, delegate: self)
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

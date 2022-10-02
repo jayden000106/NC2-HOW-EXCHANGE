@@ -24,6 +24,7 @@ class SelectViewController: UIViewController {
         super.viewWillAppear(animated)
         if let image = capturedImage {
             imageView.image = image
+            imageView.contentMode = .scaleAspectFill
             confirmButton.isEnabled = true
         } else {
             setPHPicker()

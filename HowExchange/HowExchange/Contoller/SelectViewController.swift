@@ -9,6 +9,7 @@ import UIKit
 import PhotosUI
 
 class SelectViewController: UIViewController {
+    var capturedImage: UIImage? = nil
     
     @IBOutlet weak private var imageView: UIImageView!
     @IBOutlet weak private var confirmButton: UIBarButtonItem!
@@ -21,7 +22,12 @@ class SelectViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setPHPicker()
+        if let image = capturedImage {
+            imageView.image = image
+            confirmButton.isEnabled = true
+        } else {
+            setPHPicker()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -206,26 +206,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-eh-HWB">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-eh-HWB">
                                 <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpS-nn-oGp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="661"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="669"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwD-T4-rgg">
                                         <rect key="frame" x="0.0" y="669" width="414" height="135"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufJ-pc-2IU">
-                                                <rect key="frame" x="177" y="20" width="60" height="60"/>
+                                                <rect key="frame" x="165" y="20" width="84" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Zvd-br-5cq"/>
-                                                    <constraint firstAttribute="height" constant="60" id="t9H-g4-JPp"/>
+                                                    <constraint firstAttribute="height" constant="60" id="naT-aB-Vzg"/>
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
-                                                    <imageReference key="image" image="circle" catalog="system" symbolScale="default"/>
+                                                    <imageReference key="image" image="CircleButton" symbolScale="default"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="takePhotoButtonTapped:" destination="nLX-oq-kgV" eventType="touchUpInside" id="YXQ-q3-7pc"/>
@@ -234,9 +233,9 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="ufJ-pc-2IU" firstAttribute="centerX" secondItem="cwD-T4-rgg" secondAttribute="centerX" id="Bcs-4K-doX"/>
-                                            <constraint firstAttribute="height" constant="135" id="vse-6i-Ncd"/>
-                                            <constraint firstItem="ufJ-pc-2IU" firstAttribute="top" secondItem="cwD-T4-rgg" secondAttribute="top" constant="20" id="wIe-K3-0a9"/>
+                                            <constraint firstItem="ufJ-pc-2IU" firstAttribute="centerX" secondItem="cwD-T4-rgg" secondAttribute="centerX" id="AWQ-JD-muJ"/>
+                                            <constraint firstAttribute="height" constant="135" id="KEN-yY-zL5"/>
+                                            <constraint firstItem="ufJ-pc-2IU" firstAttribute="top" secondItem="cwD-T4-rgg" secondAttribute="top" constant="20" id="S0Y-ad-UqC"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -245,10 +244,10 @@
                         <viewLayoutGuide key="safeArea" id="yIQ-hb-xig"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="8ym-eh-HWB" secondAttribute="bottom" id="8bE-vE-Ww6"/>
-                            <constraint firstItem="yIQ-hb-xig" firstAttribute="trailing" secondItem="8ym-eh-HWB" secondAttribute="trailing" id="aw7-gC-ZgN"/>
-                            <constraint firstItem="8ym-eh-HWB" firstAttribute="leading" secondItem="yIQ-hb-xig" secondAttribute="leading" id="spa-H8-p1X"/>
-                            <constraint firstItem="8ym-eh-HWB" firstAttribute="top" secondItem="yIQ-hb-xig" secondAttribute="top" id="uM8-7u-p2e"/>
+                            <constraint firstItem="8ym-eh-HWB" firstAttribute="top" secondItem="yIQ-hb-xig" secondAttribute="top" id="E57-QP-5Mi"/>
+                            <constraint firstItem="8ym-eh-HWB" firstAttribute="leading" secondItem="yIQ-hb-xig" secondAttribute="leading" id="Ip3-FT-Ksp"/>
+                            <constraint firstAttribute="bottom" secondItem="8ym-eh-HWB" secondAttribute="bottom" id="Ndc-QY-plF"/>
+                            <constraint firstItem="8ym-eh-HWB" firstAttribute="trailing" secondItem="yIQ-hb-xig" secondAttribute="trailing" id="tih-ex-2Mj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8XC-7p-7BZ">
@@ -266,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1JT-Ef-Kuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1567" y="116"/>
+            <point key="canvasLocation" x="1566.6666666666667" y="115.84821428571428"/>
         </scene>
         <!--Calculate View Controller-->
         <scene sceneID="PxJ-eL-kZw">
@@ -563,9 +562,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CircleButton" width="60" height="60"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
-        <image name="circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

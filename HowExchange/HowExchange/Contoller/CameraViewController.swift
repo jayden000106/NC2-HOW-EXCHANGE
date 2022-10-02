@@ -70,7 +70,10 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let imageData = photo.fileDataRepresentation() else { return }
         
-        let _ = UIImage(data: imageData)
+        let capturedImage = UIImage(data: imageData)
+        guard let selectImageViewController = storyboard?.instantiateViewController(withIdentifier: "SelectViewController") as? SelectViewController else { return }
+        selectImageViewController.capturedImage = capturedImage
+        navigationController?.pushViewController(selectImageViewController, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
